@@ -141,7 +141,7 @@ pub enum DeepgramError {
 
     #[cfg(feature = "listen")]
     /// Something went wrong with WS.
-    #[error("Something went wrong with WS: {0}")]
+    #[error("Something went wrong with WS: {0:?}")]
     WsError(#[from] tungstenite::Error),
 
     /// Something went wrong during serialization/deserialization.
